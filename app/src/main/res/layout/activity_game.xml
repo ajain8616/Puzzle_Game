@@ -5,11 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".GameActivity">
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/bgm" />
+
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="?actionBarSize"
@@ -25,16 +21,17 @@
         android:textStyle="bold"
         android:layout_gravity="center"
         android:text="@string/steps_0"/>
+
     <TextView
         android:id="@+id/timerView"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:textSize="19sp"
-        android:textColor="@color/colorPrimaryDark"
-        android:textStyle="bold"
         android:layout_gravity="center"
-        android:text="@string/time_00_00_00"/>
+        android:layout_weight="1"
+        android:text="@string/time_00_00_00"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="19sp"
+        android:textStyle="bold" />
 </LinearLayout>
 <RelativeLayout
     android:id="@+id/group"
@@ -53,12 +50,14 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:tag="00"
+        android:textStyle="bold"
         android:text="@string/Btn1"/>
     <Button
         android:id="@+id/btn2"
         android:layout_width="65dp"
         android:layout_height="65dp"
         android:onClick="buttonClick"
+        android:textStyle="bold"
         android:textColor="@color/colorWhite"
         android:backgroundTint="@color/colorAccentDark"
         android:layout_alignParentTop="true"
@@ -76,6 +75,7 @@
         android:layout_alignParentTop="true"
         android:layout_toEndOf="@+id/btn2"
         android:tag="02"
+        android:textStyle="bold"
          android:text="@string/Btn3"
         android:layout_toRightOf="@+id/btn2" />
     <Button
@@ -84,6 +84,7 @@
         android:layout_height="65dp"
         android:textColor="@color/colorWhite"
         android:onClick="buttonClick"
+        android:textStyle="bold"
         android:backgroundTint="@color/colorAccentDark"
         android:layout_alignParentTop="true"
         android:layout_toEndOf="@+id/btn3"
@@ -98,6 +99,7 @@
         android:layout_height="65dp"
         android:textColor="@color/colorWhite"
         android:onClick="buttonClick"
+        android:textStyle="bold"
         android:backgroundTint="@color/colorAccentDark"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
@@ -110,6 +112,7 @@
         android:layout_height="65dp"
         android:textColor="@color/colorWhite"
         android:onClick="buttonClick"
+        android:textStyle="bold"
         android:backgroundTint="@color/colorAccentDark"
       android:layout_below="@+id/btn1"
         android:layout_toEndOf="@+id/btn1"
@@ -122,6 +125,7 @@
         android:layout_height="65dp"
         android:textColor="@color/colorWhite"
         android:onClick="buttonClick"
+        android:textStyle="bold"
         android:backgroundTint="@color/colorAccentDark"
         android:layout_below="@+id/btn1"
         android:layout_toEndOf="@+id/btn2"
@@ -138,6 +142,7 @@
       android:layout_below="@+id/btn1"
         android:layout_toEndOf="@+id/btn3"
         android:tag="13"
+        android:textStyle="bold"
         android:text="@string/Btn8"
         android:layout_toRightOf="@+id/btn3" />
 
@@ -150,6 +155,7 @@
         android:backgroundTint="@color/colorAccentDark"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
+        android:textStyle="bold"
         android:layout_below="@+id/btn5"
         android:tag="20"
         android:text="@string/Btn9" />
@@ -164,6 +170,7 @@
         android:layout_toEndOf="@+id/btn5"
         android:tag="21"
         android:text="@string/Btn10"
+        android:textStyle="bold"
         android:layout_toRightOf="@+id/btn1" />
     <Button
         android:id="@+id/btn11"
@@ -173,6 +180,7 @@
         android:onClick="buttonClick"
         android:backgroundTint="@color/colorAccentDark"
         android:layout_below="@+id/btn5"
+        android:textStyle="bold"
         android:layout_toEndOf="@+id/btn2"
         android:tag="22"
         android:text="@string/Btn11"
@@ -181,6 +189,7 @@
         android:id="@+id/btn12"
         android:layout_width="65dp"
         android:layout_height="65dp"
+        android:textStyle="bold"
         android:textColor="@color/colorWhite"
         android:onClick="buttonClick"
         android:backgroundTint="@color/colorAccentDark"
@@ -201,6 +210,7 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/btn9"
         android:tag="30"
+        android:textStyle="bold"
         android:text="@string/Btn13" />
     <Button
         android:id="@+id/btn14"
@@ -213,6 +223,7 @@
         android:layout_toEndOf="@+id/btn5"
         android:tag="31"
         android:text="@string/Btn14"
+        android:textStyle="bold"
         android:layout_toRightOf="@+id/btn1" />
     <Button
         android:id="@+id/btn15"
@@ -220,6 +231,7 @@
         android:textColor="@color/colorWhite"
         android:layout_height="65dp"
         android:onClick="buttonClick"
+        android:textStyle="bold"
         android:backgroundTint="@color/colorAccentDark"
         android:layout_below="@+id/btn9"
         android:layout_toEndOf="@+id/btn2"
@@ -247,22 +259,28 @@
         android:layout_gravity="bottom"
         android:orientation="horizontal" >
 
-        <Button
+        <ImageButton
             android:id="@+id/ShuffleBtn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="@string/shuffle"
-            android:textColor="@color/colorWhite"
+           android:src="@drawable/ic_shuffle"
             android:backgroundTint="@color/colorAccentDark"/>
 
-        <Button
+        <ImageButton
             android:id="@+id/StopBtn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="@string/stop"
-            android:textColor="@color/colorWhite"
+         android:src="@drawable/ic_stop"
+            android:backgroundTint="@color/colorAccentDark"/>
+
+        <ImageButton
+            android:id="@+id/restartBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_replay"
             android:backgroundTint="@color/colorAccentDark"/>
     </LinearLayout>
 </FrameLayout>
