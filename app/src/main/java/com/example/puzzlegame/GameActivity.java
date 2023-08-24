@@ -94,8 +94,8 @@ public class GameActivity extends AppCompatActivity {
                 AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(GameActivity.this);
                 dialogBuilder.setMessage("Game Restart")
                         .setPositiveButton("Yes", (dialog, which) -> {
-                            // Reset the game here
                             stepCount = 0;
+                            timerCount=0;
                             stepsView.setText("Steps: " + stepCount);
                             generateNumbers();
                             DataToViews();
@@ -108,7 +108,6 @@ public class GameActivity extends AppCompatActivity {
                             stopButton.setClickable(true);
                         })
                         .setNegativeButton("No", (dialog, which) -> {
-                            // Do nothing
                         })
                         .show();
             }
@@ -132,7 +131,7 @@ public class GameActivity extends AppCompatActivity {
         int second = timerCount % 60;
         int hour = timerCount / 60;
         int minute = (timerCount - hour * 3600) / 60;
-        timerView.setText(String.format("Time-%02d:%02d:%02d", hour, minute, second));
+        timerView.setText(String.format("%d:%d:%d",hour, minute, second));
     }
 
     private void loadNumbers() {
@@ -216,7 +215,6 @@ public class GameActivity extends AppCompatActivity {
             timer.cancel();
             shuffleButton.setClickable(false);
             stopButton.setClickable(false);
-            restartButton.setClickable(false);
         }
     }
 }
