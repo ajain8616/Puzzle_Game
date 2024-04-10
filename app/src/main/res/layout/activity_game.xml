@@ -28,7 +28,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="center"
         android:layout_weight="1"
-        android:text="@string/time_00_00_00"
+        android:text="@string/timer"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="19sp"
         android:textStyle="bold" />
@@ -264,23 +264,26 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-           android:src="@drawable/ic_shuffle"
-            android:backgroundTint="@color/colorAccentDark"/>
+            android:backgroundTint="@color/colorAccentDark"
+            android:src="@drawable/ic_shuffle"
+            app:tint="#E80E0E" />
 
         <ImageButton
             android:id="@+id/StopBtn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-         android:src="@drawable/ic_stop"
-            android:backgroundTint="@color/colorAccentDark"/>
+            android:backgroundTint="@color/colorAccentDark"
+            android:src="@drawable/ic_stop"
+            app:tint="#FD0000" />
 
         <ImageButton
             android:id="@+id/restartBtn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:backgroundTint="@color/colorAccentDark"
             android:src="@drawable/ic_replay"
-            android:backgroundTint="@color/colorAccentDark"/>
+            app:tint="#FF0505" />
     </LinearLayout>
 </FrameLayout>

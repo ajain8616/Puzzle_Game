@@ -131,7 +131,7 @@ public class GameActivity extends AppCompatActivity {
         int second = timerCount % 60;
         int hour = timerCount / 60;
         int minute = (timerCount - hour * 3600) / 60;
-        timerView.setText(String.format("%d:%d:%d",hour, minute, second));
+        timerView.setText(String.format(" %d :: %d :: %d ", hour , minute , second ));
     }
 
     private void loadNumbers() {
